@@ -1,5 +1,15 @@
+class TMMissing: pass 
 class TMRange:
-  def __init__(self,start,end,step=1):
+  def __init__(self,start,end=TMMissing(),step=1):
+     if(type(end) is TMMissing)==True:
+        end=start
+        start=1
+     if isinstance(start,int)==False: raise TypeError(f"Value of start should be of type {type(33)},found {type(start)} : {start}")
+     if isinstance(start,int)==False: raise TypeError(f"Value of start should be of type {type(33)},found {type(start)} : {start}")
+     if isinstance(start,int)==False: raise TypeError(f"Value of start should be of type {type(33)},found {type(start)} : {start}")    
+     if step==0: raise ValueError(f"start is {start}, end is {end} and step is {step}, this leads to infinite range")
+     if start<end and step<0: raise ValueError(f"start is {start}, end is {end} and step is {step}, this leads to infinite range")
+     if start>end and step>0: raise ValueError(f"start is {start}, end is {end} and step is {step}, this leads to infinite range")
      self.start=start
      self.end=end 
      self.step=step
@@ -26,3 +36,7 @@ for i in x:
    for j in x:
       for k in x:
          print(i,j,k)
+y=TMRange(10,5,1)
+for i in y:
+   for j in y:
+      print(i,j)
