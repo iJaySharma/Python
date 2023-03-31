@@ -1,0 +1,10 @@
+import array as arr
+a=arr.array('i')
+a.append(10)
+a.append(20)
+a.append(20)
+a.append(10)
+a.append(30)
+print(a.count(20))
+print(a.count(100))
+print(a.count(2.2))

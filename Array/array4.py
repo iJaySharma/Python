@@ -1,0 +1,16 @@
+import array as arr
+a=arr.array('i')
+a.append(10)
+a.append(20)
+a.append(30)
+a.append(40)
+a.append(20)
+a.append(30)
+a.insert(100,2929)
+a.insert(-2,30000)
+a.insert(3,3440404)
+a.reverse()
+#a.remove(400)
+a.pop()# index can be passed other wise last index element
+for x in a: print(x)
+#print(a.index(300))
