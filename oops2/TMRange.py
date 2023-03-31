@@ -25,18 +25,12 @@ class TMRangeIterator:
      self.step=obj.step
      self.current=self.start
   def __next__(self):
+    if self.step>0:
      if self.current>self.end: raise StopIteration
-     data=self.current 
-     self.current+=self.step
-     return data
+    else:
+     if self.current<self.end: raise StopIteration 
+    data=self.current 
+    self.current+=self.step
+    return data
   def __str__(self):
      return f"TMRangeIterator({self.start},{self.end})"
-x=TMRange(1,3)
-for i in x:
-   for j in x:
-      for k in x:
-         print(i,j,k)
-y=TMRange(10,5,1)
-for i in y:
-   for j in y:
-      print(i,j)
