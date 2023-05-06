@@ -18,7 +18,7 @@ print("Time taken in nano seconds : ",end-start)
 print(f"sum of {ts[0]} is {sum[0]}")
 print(f"sum of {ts[1]} is {sum[1]}")
 
-# alternative method 
+# alternative method this is about lazy loading
 
 import time as tt
 import random as rr
