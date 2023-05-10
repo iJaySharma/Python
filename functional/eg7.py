@@ -1,3 +1,4 @@
+# comprehension generator function
 def xyz():
    x=1
    yield x
