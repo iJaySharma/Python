@@ -10,3 +10,19 @@ def report():
   print("cool")
 
 report()
+
+
+class HeaderAdder:
+  def __init__(self,heading):
+    self.heading=heading
+  def __call__(self,f):
+     def withHeader():
+        print(self.heading)
+        f()
+     return withHeader
+  
+@HeaderAdder("Weather Report")
+def report():
+  print("Today will be shiny day")
+
+report()
