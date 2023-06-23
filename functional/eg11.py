@@ -1,3 +1,5 @@
+# closure 
+
 def abcd(c):
    def pqr():
        print("Great &",c)
