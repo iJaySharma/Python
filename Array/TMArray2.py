@@ -29,6 +29,15 @@ class TMArray:
       startIndex=rowIndex*self.columns
       endIndex=startIndex+self.columns-1
       return TMArrayRow(self.x,startIndex,endIndex)
+   def transpose(self):
+      t=TMArray(self.columns,self.rows)
+      for r in range(self.columns):
+         for c in range(self.rows):
+            t[r][c]=self[c][r]
+      self.x=t.x
+      self.rows=t.rows
+      self.columns=t.columns
+ 
 x=TMArray(3,2)
 print(x)
 x[0][0]=1
@@ -37,4 +46,6 @@ x[1][0]=3
 x[1][1]=4
 x[2][0]=5
 x[2][1]=6
+print(x)
+x.transpose()
 print(x)
